@@ -6,11 +6,11 @@ function Info() {
   const { data, add } = useContext(CartContext);
   const { productId } = useParams();
 
-  // Check if data is null or undefined before trying to find the product
+
 
   const product = data.find((item) => item.id === parseInt(productId));
 
-  // Check if a matching product was found
+  
   if (!product) {
     return <div>Product not found</div>; // or handle the not found state
   }
